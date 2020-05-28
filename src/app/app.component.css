@@ -1,4 +1,170 @@
-.pokedex {
+.top-header{
+position:fixed;
+top:0;
+left:0;
+height:48px;
+width:100%;
+background: rgb(0, 0, 128);
+color:whitesmoke;
+display:flex;
+justify-content: center;   /*x axis*/
+align-items:center;      /*y axis*/
+
+}
+
+.title-text{
+font-size: 32px;
+font-weight: 900;
+/* line-height: 48px; */
+
+
+}
+
+
+
+
+.container{
+position:fixed;
+top:48px;
+left:0;
+height:calc(100vh - 104px);
+width:calc(100% - 32px);
+font-size: 12px;
+background: whitesmoke;
+color:rgb(0, 0, 128);
+display:flex;
+flex-wrap:wrap;
+justify-content: space-around;   
+align-items:center; 
+padding: 16px;
+overflow:auto;
+
+}
+
+.preview-pane{
+
+
+width:30%;
+min-width: 288px;
+max-height: 400px;
+height: 100%;
+position: sticky;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    
+    
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 2px;
+padding: 8px;
+margin: 8px;
+
+
+}
+
+.listing-pane{
+height:100%;
+overflow-y:auto;
+width:60%;min-width: 288px;
+
+display:flex;
+flex-wrap:wrap;
+
+justify-content: space-around;
+
+}
+
+.pokedex-pokemon{
+
+background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 2px;
+padding: 8px;
+margin: 8px;
+height: 126px;
+width: 96px;
+
+
+}
+
+
+.footer{
+  position:fixed;
+top:calc(100vh - 24px);
+left:0;
+height:24px;
+width:100%;
+font-size: 12px;
+background: rgb(0, 0, 128);
+color:whitesmoke;
+display:flex;
+justify-content: flex-start;   /*x axis*/
+align-items:center; 
+padding-left: 8px;
+
+
+}
+
+.load-button {
+    display: block;
+    margin: auto;
+    border: 0;
+    border-radius: 2px;
+    background-color:rgb(0, 0, 128);
+    color: rgb(255, 255, 255);
+    max-width: 200px;
+    padding: 10px 50px;
+    font-size: 20px;
+    height: 40px;
+}
+.preview-pane-image{
+
+  width: 100%;
+  
+}
+
+.preview-pane-name{
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .pokedex {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -48,4 +214,4 @@
 
 .load-button[disabled] {
   opacity: 0.6;
-}
+} */

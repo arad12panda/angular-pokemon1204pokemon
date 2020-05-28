@@ -37,7 +37,7 @@ export class AppComponent {
    * to true if an error occurred.
    */
   error: boolean = false;
-
+   selectedPokemon:Pokemon;
   /**
    * Inject the Pokedex service.
    */
@@ -53,17 +53,17 @@ export class AppComponent {
     /**
      * Load the initial data.
      */
-    this.loadMore();
+    this.loadMore(12);
   }
 
-  loadMore() {
+  loadMore(count=6) {
     this.isLoading = true;
 
     /**
      * Use the Pokedex service
      * to load the next 9 Pokemon.
      */
-    this.pokedexService.getPokemon(this.pokemon.length, 9)
+    this.pokedexService.getPokemon(this.pokemon.length, count)
       .then(pokemon => {
         pokemon = pokemon.map(p => {
           p.imageLoaded = false;
@@ -81,6 +81,12 @@ export class AppComponent {
         this.error = true;
         this.isLoading = false;
       });
+  }
+
+  selectPokemon(pokemon:Pokemon){
+    this.selectedPokemon = pokemon;
+    console.log(this.selectedPokemon);
+
   }
 }
 
